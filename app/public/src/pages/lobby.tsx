@@ -1,26 +1,24 @@
-import { type NonFunctionPropNames } from "@colyseus/schema/lib/types/HelperTypes"
 import { Client, Room, RoomAvailable } from "colyseus.js"
+import { type NonFunctionPropNames } from "@colyseus/schema/lib/types/HelperTypes"
 import firebase from "firebase/compat/app"
 import React, { useCallback, useEffect, useRef, useState } from "react"
-import { Modal } from "react-bootstrap"
 import { useTranslation } from "react-i18next"
 import { Navigate } from "react-router-dom"
+import { Modal } from "react-bootstrap"
 import LobbyUser from "../../../models/colyseus-models/lobby-user"
-import PokemonConfig from "../../../models/colyseus-models/pokemon-config"
 import {
   TournamentBracketSchema,
   TournamentPlayerSchema,
   TournamentSchema
 } from "../../../models/colyseus-models/tournament"
+import PokemonConfig from "../../../models/colyseus-models/pokemon-config"
 import { IBot } from "../../../models/mongo-models/bot-v2"
-import { IUserMetadata } from "../../../models/mongo-models/user-metadata"
 import {
   ICustomLobbyState,
   ISuggestionUser,
   PkmWithConfig,
   Transfer
 } from "../../../types"
-import { logger } from "../../../utils/logger"
 import { useAppDispatch, useAppSelector } from "../hooks"
 import i18n from "../i18n"
 import store from "../stores"
@@ -71,9 +69,11 @@ import CurrentUsers from "./component/available-user-menu/current-users"
 import Chat from "./component/chat/chat"
 import TabMenu from "./component/lobby-menu/tab-menu"
 import { MainSidebar } from "./component/main-sidebar/main-sidebar"
-import { cc } from "./utils/jsx"
-import { LocalStoreKeys, localStore } from "./utils/store"
 import { FIREBASE_CONFIG } from "./utils/utils"
+import { IUserMetadata } from "../../../models/mongo-models/user-metadata"
+import { logger } from "../../../utils/logger"
+import { localStore, LocalStoreKeys } from "./utils/store"
+import { cc } from "./utils/jsx"
 import "./lobby.css"
 
 export default function Lobby() {
@@ -241,8 +241,6 @@ export async function joinLobbyRoom(
             "lobby",
             { idToken: token }
           )
-          console.log(room)
-          console.log(client)
           room.state.messages.onAdd((m) => {
             dispatch(pushMessage(m))
           })
@@ -333,10 +331,7 @@ export async function joinLobbyRoom(
 
             tournament.brackets.onRemove((bracket, bracketId) => {
               dispatch(
-                removeTournamentBracket({
-                  tournamendId: tournament.id,
-                  bracketId
-                })
+                removeTournamentBracket({ tournamendId: tournament.id, bracketId })
               )
             })
           })

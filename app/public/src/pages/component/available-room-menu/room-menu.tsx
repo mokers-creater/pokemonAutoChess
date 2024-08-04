@@ -87,7 +87,6 @@ export default function RoomMenu(props: {
                 : `${name}'${name.endsWith("s") ? "" : "s"} room`
           }
         )
-        console.log(room)
         await lobby.leave()
         room.connection.close()
         localStore.set(
