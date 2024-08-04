@@ -107,6 +107,7 @@ export default class GameRoom extends Room<GameState> {
     whenReady: (room: GameRoom) => void
   }) {
     logger.trace("create game room")
+    logger.info(options)
     this.setMetadata(<IGameMetadata>{
       name: options.name,
       ownerName: options.ownerName,
