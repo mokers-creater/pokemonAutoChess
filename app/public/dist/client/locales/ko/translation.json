@@ -59,6 +59,7 @@
     "GUILLOTINE": "가위자르기",
     "ROCK_SLIDE": "스톤샤워",
     "HEAT_WAVE": "열풍",
+    "FLAMETHROWER": "화염방사",
     "THUNDER": "번개",
     "HYDRO_PUMP": "하이드로펌프",
     "DRACO_METEOR": "용성군",
@@ -149,6 +150,7 @@
     "SKY_ATTACK_SHADOW": "불새",
     "ILLUSION": "일루전",
     "SHELTER": "농성",
+    "LAVA_PLUME": "분연",
     "SMOG": "스모그",
     "SLUDGE": "오물공격",
     "SLUDGE_WAVE": "오물웨이브",
@@ -399,7 +401,11 @@
     "TRANSE": "무아지경",
     "GLACIATE": "얼어붙은세계",
     "WOOD_HAMMER": "우드해머",
-    "TRICK_OR_TREAT": "핼러윈"
+    "TRICK_OR_TREAT": "핼러윈",
+    "FREEZING_GLARE": "얼어붙는시선",
+    "THUNDEROUS_KICK": "천둥차기",
+    "FIERY_WRATH": "타오르는분노",
+    "VISE_GRIP": "찝기"
   },
   "pkm": {
     "DEFAULT": "미싱노",
@@ -584,6 +590,9 @@
     "ZAPDOS": "썬더",
     "MOLTRES": "파이어",
     "ARTICUNO": "프리져",
+    "GALARIAN_ZAPDOS": "가라르썬더",
+    "GALARIAN_MOLTRES": "가라르파이어",
+    "GALARIAN_ARTICUNO": "가라르프리져",
     "DIALGA": "디아루가",
     "PALKIA": "펄기아",
     "SUICUNE": "스이쿤",
@@ -1253,7 +1262,9 @@
     "DARUMAKA": "달막화",
     "DARMANITAN": "불비달마",
     "DARMANITAN_ZEN": "불비달마(달마모드)",
-    "TURTONATOR": "폭거북스"
+    "TURTONATOR": "폭거북스",
+    "KRABBY": "크랩",
+    "KINGLER": "킹크랩"
   },
   "ability_description": {
     "SOFT_BOILED": "모든 아군 포켓몬의 상태이상효과를 회복하며 [20,40,80,SP] 만큼의 SHIELD를 부여한다.",
